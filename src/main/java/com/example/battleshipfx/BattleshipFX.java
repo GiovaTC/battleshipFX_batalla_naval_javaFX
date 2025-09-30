@@ -88,6 +88,39 @@ public class BattleshipFX extends Application {
         primaryStage.show();
     }
 
+    // toogle rotation button text
+    private void toggleRotation() {
+        placeHorizontal = !rotateBtn.isSelected();
+        rotateBtn.setText(placeHorizontal ? "horizontal" : "vertical");
+    }
+
+    // build ship selection UI (dragabble labels)
+    private void buildShipSelection() {
+        shipBox = new VBox(6);
+        shipBox.setPadding(new Insets(6));
+
+        for (ShipType st : ShipType.values()) {
+            Label lbl = new Label(st.getName() + " (" + st.getSize() + ")");
+            lbl.setPrefWidth(150);
+            lbl.setPadding(new Insets(6));
+            lbl.setStyle("-fx-border-color: black; -fx-background-color: lightgray;");
+
+            lbl.setOnMouseClicked(e -> {
+                // marca selección visualmente
+                for (javafx.scene.Node n : shipBox.getChildren()) {
+                    n.setStyle("-fx-border-color: black; -fx-background-color: lightgray;");
+                }
+                lbl.setStyle("-fx-border-color: dodgerblue; -fx-background-color: lightcyan;");
+
+                // almacena la selección para usar al colocar barcos
+                selectedShipType = st;
+                statusLabel.setText("Barco seleccionado: " + st.getName());
+            });
+
+            shipBox.getChildren().add(lbl);
+        }
+    }
+
     // iniciar partida
     private void onStart() {
         if (playerShips.size() < ShipType.values().length) {
