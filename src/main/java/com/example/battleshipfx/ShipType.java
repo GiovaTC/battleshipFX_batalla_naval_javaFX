@@ -1,8 +1,25 @@
 package com.example.battleshipfx;
 
-// --- Inner helper classes ---
-public class ShipType {
-    final String name;
-    final int size;
-    ShipType(String n, int s) { name = n; size = s; }
+public enum ShipType {
+    CARRIER("Portaaviones", 5),
+    BATTLESHIP("Acorazado", 4),
+    CRUISER("Crucero", 3),
+    SUBMARINE("Submarino", 3),
+    DESTROYER("Destructor", 2);
+
+    private final String name;
+    private final int size;
+
+    ShipType(String name, int size) {
+        this.name = name;
+        this.size = size;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getSize() {
+        return size;
+    }
 }
