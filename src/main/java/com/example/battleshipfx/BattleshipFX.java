@@ -62,6 +62,24 @@ public class BattleshipFX extends Application {
         root.setPadding(new Insets(10));
 
         // top = title and controls :. .
-
+        HBox top = new HBox(10);
+        top.setAlignment(Pos.CENTER_LEFT);
+        Label title = new Label("batalla naval - javaFX");
+        title.setFont(Font.font(20));
+        rotateBtn = new ToggleButton("horizontal");
+        rotateBtn.setOnAction(e -> onStart());
+    }
+    // Start the game: lock placements, enable shooting
+    private void onStart() {
+        if (playerShips.size() < SHIP_TYPES.size()) {
+            statusLabel.setText("aun faltan barcos por colocar . puedes colocar aleatoriamente .");
+            return;
+        }
+        placingPhase = false;
+        shipBox.setDisable(true);
+        startBtn.setDisable(true);
+        statusLabel.setText("partida iniciada . es tu turno: haz clic en el tablero enemigo para disparar .");
+        // hide enemy ships visuals (ensure enemy cells show water color)
+        for (int i = 0; i < SIZE; i++) for (int j = 0; j < SIZE; j++) enemyCells[i][j].rect.setFill(Color.LIGHTBLUE);
     }
 }
