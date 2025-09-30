@@ -49,4 +49,8 @@ public class BattleshipFX extends Application {
     private boolean placingPhase = true;
     private ShipType selectedShipType = null; // selected from list
 
+    @Override
+    public void start(Stage stage) throws Exception {
+
+    }
 }
