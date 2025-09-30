@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f147f7a2-8b6e-496a-8685-15aadc65c169" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/ShipType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/CellFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/BattleshipFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/BattleshipFX.java" afterDir="false" />
     </list>
@@ -59,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1759263022346</updated>
-      <workItem from="1759263023408" duration="1590000" />
+      <workItem from="1759263023408" duration="2586000" />
     </task>
     <servers />
   </component>

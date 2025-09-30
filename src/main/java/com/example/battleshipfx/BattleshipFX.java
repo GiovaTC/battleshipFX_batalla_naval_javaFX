@@ -40,4 +40,13 @@ public class BattleshipFX extends Application {
     private VBox shipBox; // ship selection / drag source
 
     // model
+    private CellFX[][] playerCells;
+    private CellFX[][] enemyCells;
+
+    private final List<Ship> playerShips = new ArrayList<>();
+    private final List<Ship> enemyShips = new ArrayList<>();
+
+    private boolean placingPhase = true;
+    private ShipType selectedShipType = null; // selected from list
+
 }
