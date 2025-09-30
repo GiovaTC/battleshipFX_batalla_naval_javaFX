@@ -16,6 +16,8 @@ import org.controlsfx.control.spreadsheet.Grid;
 import java.util.*;
 import java.util.stream.IntStream;
 
+import static java.lang.Long.SIZE;
+
 public class BattleshipFX extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -48,9 +50,18 @@ public class BattleshipFX extends Application {
 
     private boolean placingPhase = true;
     private ShipType selectedShipType = null; // selected from list
+    private boolean placeHorizontal = true;
 
+    private final Random rnd = new Random();
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage primaryStage) {
+        playerCells = new CellFX[SIZE][SIZE];
+        enemyCells = new CellFX[SIZE][SIZE];
+
+        BorderPane root = new BorderPane();
+        root.setPadding(new Insets(10));
+
+        // top = title and controls :. .
 
     }
 }
