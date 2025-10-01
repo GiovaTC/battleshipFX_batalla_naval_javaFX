@@ -197,4 +197,57 @@ public class BattleshipFX extends Application {
             }
         }
     }
+
+    private boolean isShipAlreadyPlaced(List<Ship> shipList, ShipType st) {
+        return shipList.stream().anyMatch(s -> s.type.name.equals(st.name));
+    }
+
+    //build a grid ; if playerGrid then allow drop for ship placement ; if enemygrid allow shotting
+    private GridPane buildGrid(CellFX[][] cells, boolean isPlayer) {
+        GridPane grid = new GridPane();
+        grid.setGridLinesVisible(true);
+        for ( int r = 0; r < SIZE; r++) {
+            for (int c = 0; c < SIZE; c++) {
+                CellFX cell = new CellFX(r, c);
+                cells[r][c] = cell;
+                Rectangle rect = cell.rect;
+                rect.setWidth(30);
+                rect.setHeight(30);
+                StackPane stack = new StackPane(rect);
+                stack.setOnMouseClicked(e -> {
+                    if (placingPhase && isPlayer) {
+                        //place selected ship by click
+                        if (selectedShipType != null) {
+                            boolean ok = tryPlacePlayerShip(selectedShipType, r, c, placeHorizontal);
+                            if (ok) {
+                                statusLabel.setText("barco: " + selectedShipType.name + "colocado .");
+                                selectedShipType = null;
+                                refreshPlayerView();
+                                //disable ship label if already placed 
+                                if (playerShips.size() == SHIP_TYPES.size()) {
+                                    shipBox.setDisable(true);
+                                    statusLabel.setText("todos los barcos colocados . PULSA 'comenzar partida'.");                       
+                                }
+                            } else {
+                                statusLabel.setText("no se puede colocar ahi . intenta otra posicion .");
+                            }
+                        }
+                        else if (!placingPhase && !isPlayer) {
+                            // shoot enemy
+                            handlePlayerShoot(r, c);
+                        }    
+                });
+
+                if (isPlayer) {
+                    // allow  drag-over and drop
+                    stack.setOnDragOver(ev -> {
+                        if (ev.getGestureSource() != stack && ev.getDragboard().hasString()) {
+                            ev.acceptTransferModes(TransferMode.MOVE);
+                        }
+                        ev.consume();
+                    });
+                }
+            }
+        }
+    }
 }
