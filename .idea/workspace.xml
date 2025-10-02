@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f147f7a2-8b6e-496a-8685-15aadc65c169" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/BattleshipFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/BattleshipFX.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +54,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="BattleshipFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.battleshipfx.BattleshipFX" />
+      <module name="BattleshipFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.battleshipfx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BattleshipFX" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,7 +87,7 @@
       <workItem from="1759353589749" duration="271000" />
       <workItem from="1759354034291" duration="480000" />
       <workItem from="1759357566093" duration="1061000" />
-      <workItem from="1759409044812" duration="1299000" />
+      <workItem from="1759409044812" duration="1664000" />
     </task>
     <servers />
   </component>
