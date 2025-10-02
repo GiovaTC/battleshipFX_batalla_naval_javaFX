@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f147f7a2-8b6e-496a-8685-15aadc65c169" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/BattleshipFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/BattleshipFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/CellFX.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/Ship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/battleshipfx/ShipType.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -67,7 +68,7 @@
       <workItem from="1759353589749" duration="271000" />
       <workItem from="1759354034291" duration="480000" />
       <workItem from="1759357566093" duration="1061000" />
-      <workItem from="1759409044812" duration="712000" />
+      <workItem from="1759409044812" duration="1299000" />
     </task>
     <servers />
   </component>
